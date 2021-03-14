@@ -8,7 +8,7 @@ import richang2 from "../picture/richang2.jpg";
 import jingpin1 from "../picture/jingpin1.jpg";
 import xueshengjie1 from "../picture/xueshengjie1.jpg";
 import luntan1 from "../picture/luntan1.jpg";
-import background from "../picture/background.jpg";
+import background from "../picture/background.png";
 import tool from "../picture/tool.png";
 import diannao from "../picture/diannao.png";
 import caiwaibu from "../picture/caiwaibu.png";
@@ -24,18 +24,33 @@ import jicheng from "../picture/jicheng.png";
 
 import ketang from "../picture/ketang.png";
 import weixiu from "../picture/weixiu.png";
-import weixiu1 from "../picture/weixiu1.png";
+
 import xianshang from "../picture/xianshang.png";
 import xuesheng from "../picture/xuesheng.png";
 import zhiban from "../picture/zhiban.png";
 import zhiyuanzhe from "../picture/zhiyuanzhe.png";
-import qrtest from "../picture/qr-test.jpg";
+import qrwexin from "../picture/qr-wexin.jpg";
+import qrbilibili from "../picture/qr-bilibili.jpg";
+import qrqq from "../picture/qr-qq.png";
+import beian from "../picture/beian.png";
+
+import fivestars from "../picture/fivestars.png";
+import shijia from "../picture/shijiashetuan.png";
+import wujia from "../picture/wujiakecheng.png";
+import gongyi from "../picture/gongyi.png";
+import jingpinhuodong from "../picture/huodong.png";
 const style_qrtest = {
   width: "100%",
   height: "100%",
 };
+const style_beian = {
+  width: "18px",
+  height: "18px",
+};
 export const Nav30DataSource = {
-  wrapper: { className: "header3 home-page-wrapper" },
+  wrapper: {
+    className: "header3 home-page-wrapper",
+  },
   page: { className: "home-page" },
   logo: {
     className: "header3-logo",
@@ -93,7 +108,7 @@ export const Nav30DataSource = {
   mobileMenu: { className: "header3-mobile-menu" },
 };
 export const Banner31DataSource = {
-  wrapper: { className: "banner3" },
+  wrapper: { className: "banner3  " },
   textWrapper: {
     className: "banner3-text-wrapper k6bxcwa6wb-editor_css",
     children: [
@@ -127,7 +142,7 @@ export const Banner31DataSource = {
         href: "/#/ticket",
         children: (
           <>
-            <div>加入我们</div>
+            <b>加入我们</b>
           </>
         ),
       },
@@ -253,12 +268,12 @@ export const Feature30DataSource = {
           title: {
             className: "content3-title k6rof9gjex-editor_css",
             children: (
-              <>
+              <a href="https://mp.weixin.qq.com/s/-V8en6GdLk-Cv4km8SYo4Q">
                 <p>
                   财外部
                   <br />
                 </p>
-              </>
+              </a>
             ),
           },
           content: {
@@ -289,12 +304,12 @@ export const Feature30DataSource = {
           title: {
             className: "content3-title k6rogxj5m3r-editor_css",
             children: (
-              <>
+              <a href="https://mp.weixin.qq.com/s/S-uhGNp2LJtR3qIAjU-Y4w">
                 <p>
                   文宣部
                   <br />
                 </p>
-              </>
+              </a>
             ),
           },
           content: {
@@ -325,12 +340,12 @@ export const Feature30DataSource = {
           title: {
             className: "content3-title k6rohgkzazi-editor_css",
             children: (
-              <>
+              <a href="https://mp.weixin.qq.com/s/VLMAcVkLFCQ_QmcqnEglbg">
                 <p>
                   人资部
                   <br />
                 </p>
-              </>
+              </a>
             ),
           },
           content: {
@@ -361,12 +376,12 @@ export const Feature30DataSource = {
           title: {
             className: "content3-title k6roi0sr9o-editor_css",
             children: (
-              <>
+              <a href="https://mp.weixin.qq.com/s/YjMZGxYKWf941BFHRBiiJQ">
                 <p>
                   电脑部
                   <br />
                 </p>
-              </>
+              </a>
             ),
           },
           content: {
@@ -397,12 +412,12 @@ export const Feature30DataSource = {
           title: {
             className: "content3-title k6roin896g-editor_css",
             children: (
-              <>
+              <a href="https://mp.weixin.qq.com/s/tN6mPHzVeD6RbjEqF_yWhA">
                 <p>
                   电器部
                   <br />
                 </p>
-              </>
+              </a>
             ),
           },
           content: {
@@ -447,14 +462,7 @@ export const Feature80DataSource = {
         children: (
           <>
             <p>
-              <i>
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                &nbsp; &nbsp; &nbsp;
-                以服务社会为己任，为建设社会主义和谐社会贡献力量
-              </i>
+              <i>以服务社会为己任，为建设社会主义和谐社会贡献力量</i>
               <br />
             </p>
           </>
@@ -526,11 +534,11 @@ export const Feature80DataSource = {
                     name: "title",
                     className: "feature8-block-title",
                     children: (
-                      <>
+                      <a href="https://mp.weixin.qq.com/s/3NU4B1NJMa2fyPMfa6ER0A">
                         <p>
                           <b>日常值班</b>
                         </p>
-                      </>
+                      </a>
                     ),
                   },
                   {
@@ -565,17 +573,19 @@ export const Feature80DataSource = {
                   {
                     name: "image",
                     className: "feature8-block-image",
-                    children: <img src={xianshang} width={40} />,
+                    children: (
+                      <img src={xianshang} width={40} alt="xianshang" />
+                    ),
                   },
                   {
                     name: "title",
                     className: "feature8-block-title",
                     children: (
-                      <>
+                      <a href="https://mp.weixin.qq.com/s/vaaQJT_MUB3tGCabofXYIg">
                         <p>
-                          <b>线上交流</b>
+                          <b>线上咨询</b>
                         </p>
-                      </>
+                      </a>
                     ),
                   },
                   {
@@ -609,17 +619,19 @@ export const Feature80DataSource = {
                   {
                     name: "image",
                     className: "feature8-block-image",
-                    children: <img src={diannaobu} width={40} />,
+                    children: (
+                      <img src={diannaobu} width={40} alt="diannanbu" />
+                    ),
                   },
                   {
                     name: "title",
                     className: "feature8-block-title",
                     children: (
-                      <>
+                      <a href="https://mp.weixin.qq.com/s/DVRq674tvVmJnFzrG9dUUg">
                         <p>
                           <b>公益进社会</b>
                         </p>
-                      </>
+                      </a>
                     ),
                   },
                   {
@@ -653,18 +665,20 @@ export const Feature80DataSource = {
                   {
                     name: "image",
                     className: "feature8-block-image",
-                    children: <img src={zhiyuanzhe} width={40} />,
+                    children: (
+                      <img src={zhiyuanzhe} width={40} alt="zhiyuanzhe" />
+                    ),
                   },
                   {
                     name: "title",
                     className: "feature8-block-title",
                     children: (
-                      <>
+                      <a href="https://mp.weixin.qq.com/s/388x1PW1CNBph8a_7dWjig">
                         <p>
                           <b>志愿服务</b>
                           <br />
                         </p>
-                      </>
+                      </a>
                     ),
                   },
                   {
@@ -713,18 +727,18 @@ export const Feature80DataSource = {
                   {
                     name: "image",
                     className: "feature8-block-image",
-                    children: <img src={weixiu} width={40} />,
+                    children: <img src={weixiu} width={40} alt="weixiu" />,
                   },
                   {
                     name: "title",
                     className: "feature8-block-title",
                     children: (
-                      <>
+                      <a href="https://mp.weixin.qq.com/s/388x1PW1CNBph8a_7dWjig">
                         <p>
                           校园维修&amp;社区维修
                           <br />
                         </p>
-                      </>
+                      </a>
                     ),
                   },
                   {
@@ -758,18 +772,18 @@ export const Feature80DataSource = {
                   {
                     name: "image",
                     className: "feature8-block-image",
-                    children: <img src={huodong} width={40} />,
+                    children: <img src={huodong} width={40} alt="huodong" />,
                   },
                   {
                     name: "title",
                     className: "feature8-block-title",
                     children: (
-                      <>
+                      <a href="https://mp.weixin.qq.com/s/ohFvSbbmUaubnCj-z4qDcw">
                         <p>
                           社团精品活动
                           <br />
                         </p>
-                      </>
+                      </a>
                     ),
                   },
                   {
@@ -804,18 +818,18 @@ export const Feature80DataSource = {
                     name: "image",
                     className: "feature8-block-image",
 
-                    children: <img src={ketang} width={40} />,
+                    children: <img src={ketang} width={40} alt="ketang" />,
                   },
                   {
                     name: "title",
                     className: "feature8-block-title",
                     children: (
-                      <>
+                      <a href="https://mp.weixin.qq.com/s/KA7ggOmDcmhclWt0vCQC0Q">
                         <p>
                           维修知识课堂
                           <br />
                         </p>
-                      </>
+                      </a>
                     ),
                   },
                   {
@@ -849,7 +863,7 @@ export const Feature80DataSource = {
                   {
                     name: "image",
                     className: "feature8-block-image",
-                    children: <img src={xuesheng} width={40} />,
+                    children: <img src={xuesheng} width={40} alt="xuesheng" />,
                   },
                   {
                     name: "title",
@@ -909,7 +923,7 @@ export const Feature80DataSource = {
                   {
                     name: "image",
                     className: "feature8-block-image",
-                    children: <img src={jicheng} width={40} />,
+                    children: <img src={jicheng} width={40} alt="jicheng" />,
                   },
                   {
                     name: "title",
@@ -926,12 +940,12 @@ export const Feature80DataSource = {
                     name: "content",
                     className: "feature8-block-content k6ry0mq0ks-editor_css",
                     children: (
-                      <>
+                      <a href="https://mp.weixin.qq.com/s/xGDr9QoajBd83RHuZPIZKg">
                         <p>
-                          &nbsp; &nbsp; 积极追求参与竞赛等创新实践活动
+                          积极追求参与竞赛等创新实践活动
                           <br />
                         </p>
-                      </>
+                      </a>
                     ),
                   },
                 ],
@@ -953,7 +967,9 @@ export const Feature80DataSource = {
                   {
                     name: "image",
                     className: "feature8-block-image",
-                    children: <img src={fenxiang1} width={40} />,
+                    children: (
+                      <img src={fenxiang1} width={40} alt="fenxiang1" />
+                    ),
                   },
                   {
                     name: "title",
@@ -970,12 +986,12 @@ export const Feature80DataSource = {
                     name: "content",
                     className: "feature8-block-content k6ry1c380kk-editor_css",
                     children: (
-                      <>
+                      <a href="https://mp.weixin.qq.com/s/IVyDrEojMEM6Zkr4u9DJGg">
                         <p>
                           “中控杯”参赛经验分享&nbsp;
                           <br />
                         </p>
-                      </>
+                      </a>
                     ),
                   },
                 ],
@@ -997,7 +1013,9 @@ export const Feature80DataSource = {
                   {
                     name: "image",
                     className: "feature8-block-image",
-                    children: <img src={fenxiang2} width={40}></img>,
+                    children: (
+                      <img src={fenxiang2} width={40} alt="fenxiang2"></img>
+                    ),
                   },
                   {
                     name: "title",
@@ -1041,7 +1059,7 @@ export const Feature80DataSource = {
                   {
                     name: "image",
                     className: "feature8-block-image",
-                    children: <img src={diy} width={40} />,
+                    children: <img src={diy} width={40} alt="diy" />,
                   },
                   {
                     name: "title",
@@ -1802,7 +1820,7 @@ export const Footer10DataSource = {
               name: "link0",
               children: (
                 <span>
-                  <img src={qrtest} alt="" style={style_qrtest}></img>
+                  <img src={qrqq} alt="" style={style_qrtest}></img>
                 </span>
               ),
               className: "kd2mmt7a7qg-editor_css",
@@ -1811,11 +1829,8 @@ export const Footer10DataSource = {
               name: "link1",
               children: (
                 <span>
-                  <span>
-                    <span>
-                      <p>纳新咨询群：111111111</p>
-                    </span>
-                  </span>
+                  <br />
+                  <b>纳新咨询群：1126888868</b>
                 </span>
               ),
               className: "kd2mqk40hca-editor_css",
@@ -1843,7 +1858,7 @@ export const Footer10DataSource = {
               name: "link0",
               children: (
                 <span>
-                  <img src={qrtest} alt="" style={style_qrtest}></img>
+                  <img src={qrwexin} alt="" style={style_qrtest}></img>
                 </span>
               ),
               className: "kd2mmt7a7qg-editor_css",
@@ -1875,7 +1890,7 @@ export const Footer10DataSource = {
               name: "link0",
               children: (
                 <span>
-                  <img src={qrtest} alt="" style={style_qrtest}></img>
+                  <img src={qrbilibili} alt="" style={style_qrtest}></img>
                 </span>
               ),
               className: "kd2mmt7a7qg-editor_css",
@@ -1891,8 +1906,19 @@ export const Footer10DataSource = {
     className: "copyright",
     children: (
       <span>
-        ©2020 浙江大学学生E志者协会 All Rights Reserved
-        <br />
+        <span class="first">
+          ©2008-2020 浙江大学学生E志者协会 All Rights Reserved
+        </span>
+        <p>
+          <span>
+            <a href="http://www.beian.miit.gov.cn/">浙ICP备20022913号-2</a>
+            <img style={style_beian} src={beian} alt="我爬了" />
+
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602011155">
+              浙公网安备 33010602011155号
+            </a>
+          </span>
+        </p>
       </span>
     ),
   },
@@ -2121,5 +2147,306 @@ export const Feature12DataSource = {
         </p>
       </>
     ),
+  },
+};
+export const Content40DataSource = {
+  wrapper: { className: "home-page-wrapper content4-wrapper" },
+  page: { className: "home-page content4 ke03sm80c9e-editor_css" },
+  OverPack: { playScale: 0.3, className: "" },
+  titleWrapper: {
+    className: "title-wrapper",
+    children: [
+      {
+        name: "title",
+        children: (
+          <span>
+            <p>小E与你，就在浙里</p>
+          </span>
+        ),
+        className: "title-h1",
+      },
+      {
+        name: "content",
+        className: "title-content content4-title-content",
+        children: (
+          <span>
+            <span>
+              <span>
+                <p>
+                  <i>也许明年的你就会出现在这里哦</i>
+                </p>
+              </span>
+            </span>
+          </span>
+        ),
+      },
+    ],
+  },
+  video: {
+    className: "content4-video",
+    children: (
+      //这些是不起作用的  只是个装饰，实际得在js文件中改
+      <iframe
+        src="//player.bilibili.com/player.html?aid=244539528&bvid=BV1rv41117UV&cid=236113571&page=1"
+        scrolling="no"
+        border="0"
+        frameborder="no"
+        framespacing="0"
+        allowfullscreen="true"
+      >
+        {" "}
+      </iframe>
+    ),
+  },
+};
+export const Feature31DataSource = {
+  wrapper: { className: "home-page-wrapper content3-wrapper" },
+  page: { className: "home-page content3" },
+  OverPack: { playScale: 0.3 },
+  titleWrapper: {
+    className: "title-wrapper",
+    children: [
+      {
+        name: "title",
+        children: (
+          <span>
+            <span>
+              <span>
+                <p>
+                  协会荣誉
+                  <br />
+                </p>
+              </span>
+            </span>
+          </span>
+        ),
+        className: "title-h1 keedh95kxlm-editor_css",
+      },
+      {
+        name: "content",
+        className: "title-content",
+        children: (
+          <span>
+            <span>
+              <span>
+                <p>仅摘取近期部分荣誉展示</p>
+              </span>
+            </span>
+          </span>
+        ),
+      },
+    ],
+  },
+  block: {
+    className: "content3-block-wrapper",
+    children: [
+      {
+        name: "block0",
+        className: "content3-block",
+        md: 8,
+        xs: 24,
+        children: {
+          icon: {
+            className: "content3-icon",
+            children: fivestars,
+          },
+          textWrapper: { className: "content3-text" },
+          title: {
+            className: "content3-title",
+            children: (
+              <span>
+                <p>五星级社团</p>
+              </span>
+            ),
+          },
+          content: {
+            className: "content3-content keedl4m5lk-editor_css",
+            children: (
+              <span>
+                <span>
+                  <span>
+                    <p>
+                      2016年协会荣升为浙江大学<b>五星级社团</b>，至今
+                      <b>已经连续四年</b>保持这一称号
+                      <br />
+                    </p>
+                  </span>
+                </span>
+              </span>
+            ),
+          },
+        },
+      },
+      {
+        name: "block1",
+        className: "content3-block",
+        md: 8,
+        xs: 24,
+        children: {
+          icon: {
+            className: "content3-icon",
+            children: shijia,
+          },
+          textWrapper: { className: "content3-text" },
+          title: {
+            className: "content3-title",
+            children: (
+              <span>
+                <p>十佳社团</p>
+              </span>
+            ),
+          },
+          content: {
+            className: "content3-content keedn4gkykf-editor_css",
+            children: (
+              <span>
+                <p>
+                  2016-2019年连续<b>获得三年</b>十佳社团荣誉称号，近九年
+                  <b>累计获得七次</b>十佳社团称号
+                </p>
+              </span>
+            ),
+          },
+        },
+      },
+      {
+        name: "block2",
+        className: "content3-block",
+        md: 8,
+        xs: 24,
+        children: {
+          icon: {
+            className: "content3-icon",
+            children: wujia,
+          },
+          textWrapper: { className: "content3-text" },
+          title: {
+            className: "content3-title",
+            children: (
+              <span>
+                <p>五佳课程</p>
+              </span>
+            ),
+          },
+          content: {
+            className: "content3-content keedi0sp7vt-editor_css",
+            children: (
+              <span>
+                <span>
+                  <p>
+                    近年来协会连续多次获得“<b>五佳课程</b>
+                    ”，“精品课程一等奖”等称号，精品课程也备受学员好评
+                  </p>
+                </span>
+              </span>
+            ),
+          },
+        },
+      },
+      {
+        name: "block3",
+        className: "content3-block",
+        md: 8,
+        xs: 24,
+        children: {
+          icon: {
+            className: "content3-icon",
+            children: jingpinhuodong,
+          },
+          textWrapper: { className: "content3-text" },
+          title: {
+            className: "content3-title",
+            children: (
+              <span>
+                <p>精品活动</p>
+              </span>
+            ),
+          },
+          content: {
+            className: "content3-content keedtwaja47-editor_css",
+            children: (
+              <span>
+                <span>
+                  <p>
+                    在学生社团文化节上举办的精品活动多次获得奖项，2019年、2018年均获得二等奖
+                  </p>
+                </span>
+              </span>
+            ),
+          },
+        },
+      },
+      {
+        name: "block4",
+        className: "content3-block",
+        md: 8,
+        xs: 24,
+        children: {
+          icon: {
+            className: "content3-icon",
+            children: gongyi,
+          },
+          textWrapper: { className: "content3-text" },
+          title: {
+            className: "content3-title",
+            children: (
+              <span>
+                <span>
+                  <span>
+                    <p>公益先锋</p>
+                  </span>
+                </span>
+              </span>
+            ),
+          },
+          content: {
+            className: "content3-content",
+            children: (
+              <span>
+                <p>
+                  2019年协会获得<b>至美公益项目</b>二等奖，同年获
+                  <b>“尚德学子”</b>
+                  奖学金社会公益奖，2015年获年度浙江大学最美公益集体。
+                  <br />
+                </p>
+              </span>
+            ),
+          },
+        },
+      },
+      {
+        name: "block5",
+        className: "content3-block",
+        md: 8,
+        xs: 24,
+        children: {
+          icon: {
+            className: "content3-icon",
+            children:
+              "https://zos.alipayobjects.com/rmsportal/ipwaQLBLflRfUrg.png",
+          },
+          textWrapper: { className: "content3-text" },
+          title: {
+            className: "content3-title",
+            children: (
+              <span>
+                <p>社会实践</p>
+              </span>
+            ),
+          },
+          content: {
+            className: "content3-content",
+            children: (
+              <span>
+                <p>
+                  2019年赴甘肃酒泉暑期社会实践团获杭州日报2019大学生社会实践擂台赛优秀奖、浙江大学优秀实践团队。2017年获浙江大学年度暑期大学生社会实践活动优秀论文
+                  <br />
+                </p>
+              </span>
+            ),
+          },
+        },
+      },
+    ],
   },
 };

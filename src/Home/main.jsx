@@ -9,20 +9,23 @@ import Feature2 from "./Feature2";
 import Feature1 from "./Feature1";
 import Content3 from "./Content3";
 import Feature8 from "./Feature8";
+import Feature3 from "./Feature3";
 import Feature6 from "./Feature6";
 import Content5 from "./Content5";
 import Content9 from "./Content9";
 import Footer1 from "./Footer1";
 import Point from "./Point";
-
+import Content4 from "./Content4";
 import {
   Nav30DataSource,
   Banner31DataSource,
   Feature20DataSource,
   Feature10DataSource,
   Feature30DataSource,
+  Feature31DataSource,
   Feature80DataSource,
   Feature60DataSource,
+  Content40DataSource,
   Content50DataSource,
   Content90DataSource,
   Footer10DataSource,
@@ -89,6 +92,12 @@ export default class Home extends React.Component {
         dataSource={Feature10DataSource}
         isMobile={this.state.isMobile}
       />,
+      <Content4
+        id="Content4_0"
+        key="Content4_0"
+        dataSource={Content40DataSource}
+        isMobile={this.state.isMobile}
+      />,
       <Content3
         id="Feature3_0"
         key="Feature3_0"
@@ -113,10 +122,10 @@ export default class Home extends React.Component {
         dataSource={Content50DataSource}
         isMobile={this.state.isMobile}
       />,
-      <Content9
-        id="Content9_0"
-        key="Content9_0"
-        dataSource={Content90DataSource}
+      <Feature3
+        id="Feature3_1"
+        key="Feature3_1"
+        dataSource={Feature31DataSource}
         isMobile={this.state.isMobile}
       />,
 
@@ -138,7 +147,6 @@ export default class Home extends React.Component {
           "Feature6_0",
           "Content5_0",
           "Content9_0",
-
           "Footer0_0",
         ]}
       />,

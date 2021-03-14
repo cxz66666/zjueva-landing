@@ -1,0 +1,57 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: restore
+    image: drillster/drone-volume-cache
+    restore: true
+    mount:
+      - ./node_modules
+    volumes:
+      - name: cache
+        path: /cache
+
+  - name: install
+    image: node:12.11.1
+    commands:
+      - npm install
+
+  - name: rebuild-cache
+    image: drillster/drone-volume-cache
+    rebuild: true
+    mount:
+      - ./node_modules
+    volumes:
+      - name: cache
+        path: /cache
+
+  - name: build
+    image: node:12.11.1
+    commands:
+      - CI=false npm run build
+      - mv build main
+
+  - name: deploy
+    image: appleboy/drone-scp
+    settings:
+      host: zjueva.net
+      username: cibot
+      port: 22
+      key:
+        from_secret: cibot_front_secret
+      target: /srv/main
+      source: main
+      rm: true
+
+trigger:
+  branch:
+    - master
+  event:
+    - push
+    - pull_request
+    - rollback
+
+volumes:
+  - name: cache
+    host:
+      path: /tmp
